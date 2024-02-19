@@ -68,7 +68,9 @@ function applyBtn() {
 }
 function enableDocument() {
     const countSeats = document.getElementById('seat-number').innerText
+    const pName= document.getElementById('passengerName')
     const number = document.getElementById('PhoneNumber')
+    const mail = document.getElementById('mailId')
     const nextBtn = document.getElementById('nextBtn')
 
     number.addEventListener('input', function () {
@@ -87,6 +89,37 @@ function enableDocument() {
             nextBtn.disabled = true
         }
     })
+    pName.addEventListener('input', function () {
+        if (countSeats === '1' && !isNaN(Number(number.value))) {
+            nextBtn.disabled = false
+            nextBtn.addEventListener('click', function () {
+                document.getElementById('hidden-modal').classList.remove('hidden')
+
+                const Continue = document.getElementById('continueBtn')
+                Continue.addEventListener('click', function () {
+                    document.getElementById('hidden-modal').classList.add('hidden')
+                })
+            })
+        }
+        else {
+            nextBtn.disabled = true
+        }
+    })
+    mail.addEventListener('input', function () {
+        if (countSeats === '1' && !isNaN(Number(number.value))) {
+            nextBtn.disabled = false
+            nextBtn.addEventListener('click', function () {
+                document.getElementById('hidden-modal').classList.remove('hidden')
+
+                const Continue = document.getElementById('continueBtn')
+                Continue.addEventListener('click', function () {
+                    document.getElementById('hidden-modal').classList.add('hidden')
+                })
+            })
+        }
+        else {
+            nextBtn.disabled = true
+        }
+    })
 
 }
-// console.log(typeof document.getElementById('PhoneNumber').value)
