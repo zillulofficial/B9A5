@@ -16,12 +16,13 @@
 
     <!-- tailwind & daisy -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>\
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .font-inter{
+        .font-inter {
             font-family: "Inter", sans-serif;
         }
-        .font-raleway{
+
+        .font-raleway {
             font-family: "Raleway", sans-serif
         }
     </style>
@@ -30,7 +31,7 @@
 <body class="font-raleway">
     <header>
         <!-- navbar section -->
-        <section>
+        <section class="container mx-auto mb-9">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
@@ -60,11 +61,51 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn bg-[#1dd1001a] text-[#1DD100] text-[20px] font-bold">Bus <img src="images/bus-icon.png" alt=""></a>
+                    <a class="btn bg-[#1dd1001a] text-[#1DD100] text-[20px] font-bold">Bus <img
+                            src="images/bus-icon.png" alt=""></a>
                 </div>
             </div>
         </section>
 
+        <!-- banner section -->
+        <section class="relative container mx-auto mb-9">
+            <div
+                class="rounded-[32px] bg-[url(images/banner.png)] bg-no-repeat bg-cover lg:min-h-[550px] bg-bottom flex flex-col gap-5 pt-6 lg:pt-16 text-center items-center">
+                <h1 class="text-4xl lg:text-[64px] font-extrabold text-white pt-5">End-to-End Travel with </h1>
+                <span class="text-4xl lg:text-[64px] font-extrabold text-[#1DD100]">P-PariBahan</span>
+                <p class="lg:text-lg font-normal font-inter text-white">Yes, you can run unit tests and view the results
+                    directly within the app. The integrated testing features allow for a streamlined .</p>
+                <button
+                    class=" bg-[#1DD100] border-none px-6 py-2 lg:px-7 lg:py-4 rounded-xl lg:text-xl font-bold mb-5">Buy
+                    Ticket</button>
+            </div>
+            <div class="lg:absolute flex flex-col items-center md:flex-row gap-12 -bottom-16 left-64">
+                <!-- first complimentary card -->
+                <div class="border-4 border-white border-b-[#1DD100] py-8 text-center font-inter bg-white rounded-3xl flex items-center gap-6 w-[308px] justify-center">
+                        <img src="images/people.png" alt="">
+                        <div>
+                            <h1 class="text-4xl font-bold">500K+</h1>
+                            <p class="text-[#03071299] ">Registered users</p>
+                        </div>
+                </div>
+                <!-- Second complimentary card -->
+                <div class="border-4 border-white border-b-[#1DD100] py-8 text-center font-inter bg-white rounded-3xl flex items-center gap-6 w-[308px] justify-center">
+                        <img src="images/ticket-cupon.png" alt="">
+                        <div>
+                            <h1 class="text-4xl font-bold">1.7 lacks</h1>
+                            <p class="text-[#03071299] ">Tickets sold</p>
+                        </div>
+                </div>
+                <!-- Third complimentary card -->
+                <div class="border-4 border-white border-b-[#1DD100] py-8 text-center font-inter bg-white rounded-3xl flex items-center gap-6 w-[308px] justify-center">
+                        <img src="images/stoppage.png" alt="">
+                        <div>
+                            <h1 class="text-4xl font-bold">80K+</h1>
+                            <p class="text-[#03071299] ">Rental partners</p>
+                        </div>
+                </div>
+            </div>
+        </section>
     </header>
     <main>
 
