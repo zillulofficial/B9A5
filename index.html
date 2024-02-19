@@ -116,12 +116,12 @@
             <h3 class="text-[40px] font-bold text-center mb-8">Best offers for you</h3>
             <div class=" flex flex-col md:flex-row gap-6 justify-center">
                 <!-- first offer card -->
-                <div class="w-[573px] h-[220px] flex items-center justify-between bg-[#FFBF0F] p-14 rounded-3xl">
+                <div class="lg:w-[573px] h-[220px] flex items-center justify-between bg-[#FFBF0F] p-14 rounded-3xl">
                     <!-- offer details -->
                     <div class="font-inter flex-1">
-                        <h3 class="text-[#030712cc] text-3xl lg:text-[40px] font-extrabold">15% OFF</h3>
-                        <p class="text-[#030712cc] text-lg lg:text-2xl font-medium">on your next purchase</p>
-                        <p class="text-[#03071280] text-lg lg:text-2xl">use by January 2024</p>
+                        <h3 class="text-[#030712cc] text-xl lg:text-[40px] font-extrabold">15% OFF</h3>
+                        <p class="text-[#030712cc]  lg:text-2xl font-medium">on your next purchase</p>
+                        <p class="text-[#03071280]  lg:text-2xl">use by January 2024</p>
                     </div>
                     <div>
                         <img class="" src="images/cupon-devider.png" />
@@ -129,24 +129,24 @@
                     <!-- Coupon -->
                     <div>
                         <h3 class="text-[#030712cc] text-3xl font-semibold">NEW15</h3>
-                        <p class="text-[#03071280]  text-lg lg:text-2xl">Coupon Code</p>
+                        <p class="text-[#03071280]  lg:text-2xl">Coupon Code</p>
                     </div>
                 </div>
                 <!-- second offer card -->
-                <div class="w-[573px] h-[220px] flex items-center justify-between bg-[#F78C9C] p-14 rounded-3xl">
+                <div class="lg:w-[573px] h-[220px] flex items-center justify-between bg-[#F78C9C] p-14 rounded-3xl">
                     <!-- offer details -->
                     <div class="font-inter flex-1">
-                        <h3 class="text-[#030712cc] text-3xl lg:text-[40px] font-extrabold">20% OFF</h3>
-                        <p class="text-[#030712cc] text-lg lg:text-2xl font-medium">on your next purchase</p>
-                        <p class="text-[#03071280] text-lg lg:text-2xl">use by January 2024</p>
+                        <h3 class="text-[#030712cc] text-xl lg:text-[40px] font-extrabold">20% OFF</h3>
+                        <p class="text-[#030712cc]  lg:text-2xl font-medium">on your next purchase</p>
+                        <p class="text-[#03071280]  lg:text-2xl">use by January 2024</p>
                     </div>
                     <div>
                         <img class="" src="images/cupon-devider.png" />
                     </div>
                     <!-- Coupon -->
                     <div>
-                        <h3 class="text-[#030712cc] text-3xl font-semibold">Couple 20</h3>
-                        <p class="text-[#03071280]  text-lg lg:text-2xl">Coupon Code</p>
+                        <h3 class="text-[#030712cc] text-3xl font-semibold">Couple20</h3>
+                        <p class="text-[#03071280]  lg:text-2xl">Coupon Code</p>
                     </div>
                 </div>
             </div>
@@ -158,12 +158,14 @@
         <section class="bg-[#F7F8F8] border-2 border-t-[#1DD100] rounded-t-[88px]">
             <!-- ticket heading -->
             <div class="pt-28 flex flex-col items-center">
-                <h2 class="text-[40px] font-bold">P.H Paribahan</h2>
-                <p class="text-[#03071299] text-lg mb-14 font-inter text-center">Yes, you can run unit tests and view the results
+                <h2 class="text-3xl lg:text-[40px] font-bold">P.H Paribahan</h2>
+                <p class="text-[#03071299] text-lg mb-14 font-inter text-center">Yes, you can run unit tests and view
+                    the results
                     directly within the app. The integrated testing features allow for a streamlined .</p>
             </div>
             <!-- ticket Outlook -->
-            <div class="container mx-auto lg:h-[418px] bg-white rounded-3xl flex flex-col md:flex-row justify-between mb-7">
+            <div
+                class="container mx-auto lg:h-[418px] bg-white rounded-3xl flex flex-col md:flex-row justify-between mb-7">
                 <!-- details -->
                 <div class="p-10 flex-1">
                     <!-- heading and logo -->
@@ -227,7 +229,8 @@
 
             </div>
             <!-- ticket sell -->
-            <div class="container mx-auto bg-white rounded-3xl flex flex-col justify-center items-center md:items-start md:flex-row md:justify-between px-8 mb-28">
+            <div
+                class="container mx-auto bg-white rounded-3xl flex flex-col justify-center items-center md:items-start md:flex-row md:justify-between px-8 mb-28">
                 <!-- seats details -->
                 <div class="flex-1">
                     <h3 class="mx-8 pt-8 text-2xl font-semibold mb-6">Select Your Seat</h3>
@@ -250,45 +253,49 @@
                     <br>
                     <br><br>
                     <!-- passenger seats -->
-                    <div class="flex gap-6 justify-evenly items-center mb-6">
+                    <div class=" flex items-center gap-9">
                         <p>A</p>
-                        <p class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">A1</p>
-                        <p class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">A2</p>
-                        <p class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">A3</p>
-                        <p class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">A4</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 flex-1 justify-evenly items-center mb-6">
+                            <p id="A1" class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">A1</p>
+                            <p id="A2" class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">A2</p>
+                            <p id="A3" class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">A3</p>
+                            <p id="A4" class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">A4</p>
+                        </div>
                     </div>
-                    <div class="flex justify-evenly items-center gap-6 mb-6">
+                    <div class=" flex items-center gap-9">
                         <p>B</p>
-                        <p class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">B
-                        <p class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">B2</p>
-                        <p class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">B3</p>
-                        <p class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">B4</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 flex-1 justify-evenly items-center mb-6">
+                            <p id="B1" class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">B1</p>
+                            <p id="B2" class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">B2</p>
+                            <p id="B3" class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">B3</p>
+                            <p id="B4" class="seat-Btn w-[110px] bg-[#F7F8F8] rounded-xl px-11 py-4">B4</p>
+                        </div>
                     </div>
                 </div>
                 <!-- calculation part -->
-                <div class="w-[433px]">
+                <div class="w-[350px] lg:w-[433px]">
                     <h3 class="mx-8 pt-8 text-2xl font-semibold mb-10">Select Your Seat</h3>
                     <div class="bg-[#F7F8F8] rounded-xl mb-6">
                         <div class="flex justify-between px-8 pt-8">
-                            <p class="font-inter font-medium">Seat <span class="bg-[#1DD100] text-white w-6 rounded-2xl">0</span></p>
+                            <p class="font-inter font-medium">Seat <span id="seat-number" class="bg-[#1DD100] text-white w-6 rounded-2xl">0</span></p>
                             <p class="font-inter font-medium">Class</p>
                             <p class="font-inter font-medium">Price</p>
                         </div>
-                        <ul>
+                        <ul id="selected-place-container">
 
                         </ul>
                         <div class="divider"></div>
                         <!-- total part -->
                         <div class="mx-8 flex justify-between mb-5">
                             <p class="font-inter">Total Price</p>
-                            <p class="font-inter">BDT <span>0</span></p>
+                            <p class="font-inter">BDT <span id="total-price">0</span></p>
                         </div>
                         <!-- search for coupon -->
                         <div class="flex justify-center mb-6">
                             <label class="input  flex justify-between items-center gap-2 rounded-xl w-[369px]">
                                 <input type="text" class="grow" placeholder="Have any coupons?" />
                                 <span class="bg-[#1DD100] rounded-xl px-5 py-2 text-white">Apply</span>
-                              </label>
+                            </label>
                         </div>
                         <!-- Grand total part -->
                         <div class="mx-8 flex justify-between pb-8">
@@ -299,12 +306,13 @@
                     <!-- passenger info -->
                     <div class="">
                         <p class="mx-8 font-inter font-semibold mb-4">Passenger Name*</p>
-                        <input type="text" placeholder="Enter Your Name" class=" input input-bordered w-full mb-6"/>
-                        <p class="mx-8 font-inter font-semibold mb-4">Phone NUmber*</p>
-                        <input type="number" placeholder="Enter your phone number" class=" input input-bordered w-full mb-6"/>
+                        <input type="text" placeholder="Enter Your Name" class=" input input-bordered mx-8 w-[300px] lg:mx-0 lg:w-[433px] mb-6" />
+                        <p class="mx-8 font-inter font-semibold mb-4">Phone Number*</p>
+                        <input type="number" placeholder="Enter your phone number" class=" input input-bordered mx-8 w-[300px] lg:mx-0 lg:w-[433px] mb-6" />
                         <p class="mx-8 font-inter font-semibold mb-4">Email ID</p>
-                        <input type="email" placeholder="Enter your email id" class="input input-bordered w-full mb-6"/>
-                        <button class="bg-[#1DD100] rounded-xl w-[433px] mx-auto text-white py-5 text-xl font-extrabold mb-6">Next</button>
+                        <input type="email" placeholder="Enter your email id" class=" input input-bordered mx-8 w-[300px] lg:mx-0 lg:w-[433px] mb-6" />
+                        <button
+                            class="bg-[#1DD100] rounded-xl w-[350px] lg:w-[433px] mx-auto text-white py-5 text-xl font-extrabold mb-6">Next</button>
                         <div class="mx-8 flex justify-center gap-10">
                             <a class="font-inter underline underline-offset-4 mb-6">Terms and Conditions</a>
                             <a class="font-inter underline underline-offset-4 mb-6">Cancellation Policy</a>
@@ -316,6 +324,38 @@
 
     </main>
     <footer>
+        <section class="bg-[#030712]">
+            <div class="container mx-auto">
+                <div
+                    class="flex flex-col gap-6 md:gap-0 items-center md:items-start md:flex-row md:justify-between pt-28">
+                    <div class="space-y-4">
+                        <h3 class="text-white text-4xl font-extrabold font-inter">P-Ticket</h3>
+                        <p class="text-[#FFFFFFCC] font-inter">P-Ticket is a digital platform to make your <br>daily
+                            commuting
+                            better.</p>
+                    </div>
+                    <div class="flex items-center gap-6 md:items-end md:gap-0 md:flex-col">
+                        <p class="text-white mb-6 font-inter text-xl font-semibold">Download our app</p>
+                        <div class="flex gap-5 border border-white p-3 rounded-xl">
+                            <img src="images/playstore.png" alt="">
+                            <div>
+                                <p class="uppercase text-white font-medium text-xs font-inter">get in Google</p>
+                                <p class="text-white font-bold text-2xl font-inter">Google Play</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider divider-success"></div>
+                <div class="flex flex-col gap-6 md:gap-0 items-center md:items-start md:flex-row justify-between pb-28">
+                    <p class="text-white font-inter">@all rights reserved, P-Ticket services limited.2024</p>
+                    <nav class="grid grid-flow-col gap-4">
+                        <a class="link link-hover text-white font-inter">Terms & condition</a>
+                        <a class="link link-hover text-white font-inter">Return & refund policy</a>
+                        <a class="link link-hover text-white font-inter">Privacy policy</a>
+                    </nav>
+                </div>
+            </div>
+        </section>
 
     </footer>
 
