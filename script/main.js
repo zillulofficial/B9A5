@@ -115,37 +115,6 @@ function enableDocument() {
             nextBtn.disabled = true
         }
     })
-    pName.addEventListener('input', function () {
-        if (countSeats === '1' && !isNaN(Number(number.value))) {
-            nextBtn.disabled = false
-            nextBtn.addEventListener('click', function () {
-                document.getElementById('hidden-modal').classList.remove('hidden')
-
-                const Continue = document.getElementById('continueBtn')
-                Continue.addEventListener('click', function () {
-                    document.getElementById('hidden-modal').classList.add('hidden')
-                })
-            })
-        }
-        else {
-            nextBtn.disabled = true
-        }
-    })
-    mail.addEventListener('input', function () {
-        if (countSeats === '1' && !isNaN(Number(number.value))) {
-            nextBtn.disabled = false
-            nextBtn.addEventListener('click', function () {
-                document.getElementById('hidden-modal').classList.remove('hidden')
-
-                const Continue = document.getElementById('continueBtn')
-                Continue.addEventListener('click', function () {
-                    document.getElementById('hidden-modal').classList.add('hidden')
-                })
-            })
-        }
-        else {
-            nextBtn.disabled = true
-        }
-    })
+   
 
 }
