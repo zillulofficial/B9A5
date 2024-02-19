@@ -1,10 +1,16 @@
 let AllBtn = document.getElementsByClassName('seat-Btn')
 let count = 0
+let getSeatCount = document.getElementById('seats').innerText
+let seatCount = parseInt(getSeatCount)
 
 for (const btn of AllBtn) {
     btn.addEventListener('click', function (e) {
         count += 1
         addInnerText('seat-number', count)
+
+        enableDocument()
+        seatCount = seatCount - 1
+        addInnerText('seats', seatCount)
         const colorBtn = btn.innerText
 
         // to set color
@@ -53,10 +59,34 @@ function applyBtn() {
     if (getCoupon.value === 'NEW15') {
         addInnerText('grand-total', totalPrice - (totalPrice * .15))
     }
-    else if(getCoupon.value === 'Couple 20') {
+    else if (getCoupon.value === 'Couple 20') {
         addInnerText('grand-total', totalPrice - (totalPrice * .20))
     }
-    else{
+    else {
         alert('You do not have an appropriate Coupon')
     }
 }
+function enableDocument() {
+    const countSeats = document.getElementById('seat-number').innerText
+    const number = document.getElementById('PhoneNumber')
+    const nextBtn = document.getElementById('nextBtn')
+
+    number.addEventListener('input', function () {
+        if (countSeats === '4' && !isNaN(Number(number.value))) {
+            nextBtn.disabled = false
+            nextBtn.addEventListener('click', function () {
+                document.getElementById('hidden-modal').classList.remove('hidden')
+
+                const Continue = document.getElementById('continueBtn')
+                Continue.addEventListener('click', function () {
+                    document.getElementById('hidden-modal').classList.add('hidden')
+                })
+            })
+        }
+        else {
+            nextBtn.disabled = true
+        }
+    })
+
+}
+// console.log(typeof document.getElementById('PhoneNumber').value)

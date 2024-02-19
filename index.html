@@ -230,7 +230,7 @@
             </div>
             <!-- ticket sell -->
             <div
-                class="container mx-auto bg-white rounded-3xl flex flex-col justify-center items-center md:items-start md:flex-row md:justify-between px-8 mb-28">
+                class="relative container mx-auto bg-white rounded-3xl flex flex-col justify-center items-center md:items-start md:flex-row md:justify-between px-8 mb-28">
                 <!-- seats details -->
                 <div class="flex-1">
                     <h3 class="mx-8 pt-8 text-2xl font-semibold mb-6">Select Your Seat</h3>
@@ -277,7 +277,8 @@
                     <h3 class="mx-8 pt-8 text-2xl font-semibold mb-10">Select Your Seat</h3>
                     <div class="bg-[#F7F8F8] rounded-xl mb-6">
                         <div class="flex justify-between px-8 pt-8">
-                            <p class="font-inter font-medium">Seat <span id="seat-number" class="bg-[#1DD100] text-white w-6 rounded-2xl">0</span></p>
+                            <p class="font-inter font-medium">Seat <span id="seat-number"
+                                    class="bg-[#1DD100] text-white rounded-2xl">0</span></p>
                             <p class="font-inter font-medium">Class</p>
                             <p class="font-inter font-medium">Price</p>
                         </div>
@@ -293,8 +294,8 @@
                         <!-- search for coupon -->
                         <div class="flex justify-center mb-6">
                             <label class="input  flex justify-between items-center gap-2 rounded-xl w-[369px]">
-                                <input type="text" class="grow" placeholder="Have any coupons?" id="coupon-apply"/>
-                                <span onclick="applyBtn()" class="bg-[#1DD100] rounded-xl px-5 py-2 text-white">Apply</span>
+                                <input type="text" class="grow" placeholder="Have any coupons?" id="coupon-apply" />
+                                <span id="applyBtn" class="bg-[#1DD100] rounded-xl px-5 py-2 text-white ">Apply</span>
                             </label>
                         </div>
                         <!-- Grand total part -->
@@ -306,21 +307,37 @@
                     <!-- passenger info -->
                     <div class="">
                         <p class="mx-8 font-inter font-semibold mb-4">Passenger Name*</p>
-                        <input type="text" placeholder="Enter Your Name" class=" input input-bordered mx-8 w-[300px] lg:mx-0 lg:w-[433px] mb-6" />
+                        <input type="text" placeholder="Enter Your Name"
+                            class=" font-inter input input-bordered mx-8 w-[300px] lg:mx-0 lg:w-[433px] mb-6" />
+
                         <p class="mx-8 font-inter font-semibold mb-4">Phone Number*</p>
-                        <input type="number" placeholder="Enter your phone number" class=" input input-bordered mx-8 w-[300px] lg:mx-0 lg:w-[433px] mb-6" />
+                        <input type="number" placeholder="Enter your phone number" id="PhoneNumber"
+                            class=" font-inter input input-bordered mx-8 w-[300px] lg:mx-0 lg:w-[433px] mb-6" />
+
                         <p class="mx-8 font-inter font-semibold mb-4">Email ID</p>
-                        <input type="email" placeholder="Enter your email id" class=" input input-bordered mx-8 w-[300px] lg:mx-0 lg:w-[433px] mb-6" />
-                        <button
-                            class="bg-[#1DD100] rounded-xl w-[350px] lg:w-[433px] mx-auto text-white py-5 text-xl font-extrabold mb-6">Next</button>
+                        <input type="email" placeholder="Enter your email id"
+                            class=" input input-bordered mx-8 w-[300px] lg:mx-0 lg:w-[433px] mb-6" />
+                            
+                        <button disabled id="nextBtn"
+                            class="bg-[#1DD100] font-inter rounded-xl w-[350px] lg:w-[433px] mx-auto text-white py-5 text-xl font-extrabold mb-6">Next</button>
                         <div class="mx-8 flex justify-center gap-10">
                             <a class="font-inter underline underline-offset-4 mb-6">Terms and Conditions</a>
                             <a class="font-inter underline underline-offset-4 mb-6">Cancellation Policy</a>
                         </div>
                     </div>
                 </div>
+                <!-- modal -->
+                <div id="hidden-modal" class="absolute bg-white w-[718px]  pb-6 flex flex-col items-center text-center space-y-4 shadow-xl top-72 right-[450px] hidden">
+                    <img class="pt-6" src="images/success.png" alt="">
+                    <p class="text-[#27AE60] text-2xl font-bold">SUCCESS</p>
+                    <p class="text-xl font-medium">Thank you for Booking Our Bus Seats.<br>We are working hard to find
+                        the best service and deals for you.</p>
+                    <p>Shortly you will find a confirmation in your email.</p>
+                    <button id="continueBtn" class="btn rounded-full bg-[#1DD100] text-white">Continue</button>
+                </div>
             </div>
         </section>
+
 
     </main>
     <footer>
