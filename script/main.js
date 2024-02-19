@@ -6,11 +6,16 @@ let seatCount = parseInt(getSeatCount)
 for (const btn of AllBtn) {
     btn.addEventListener('click', function (e) {
         count += 1
+        
+        addInnerText('seat-number', count)
         if(count > 4){
             alert('Maximum Seat Booked')
             return
         }
-        addInnerText('seat-number', count)
+        else if(count === 4){
+            document.getElementById('coupon-apply').disabled = false
+            applyBtn()
+        }
         
 
         enableDocument()
@@ -61,15 +66,18 @@ function applyBtn() {
     const total = document.getElementById('total-price').innerText;
     const totalPrice = parseInt(total)
 
-    if (getCoupon.value === 'NEW15') {
-        addInnerText('grand-total', totalPrice - (totalPrice * .15))
-    }
-    else if (getCoupon.value === 'Couple 20') {
-        addInnerText('grand-total', totalPrice - (totalPrice * .20))
-    }
-    else {
-        alert('You do not have an appropriate Coupon')
-    }
+    document.getElementById('apply-btn').addEventListener('click',function(){
+        if (getCoupon.value === 'NEW15') {
+            addInnerText('grand-total', totalPrice - (totalPrice * .15))
+        }
+        else if (getCoupon.value === 'Couple 20') {
+            addInnerText('grand-total', totalPrice - (totalPrice * .20))
+        }
+        else {
+            alert('You do not have an appropriate Coupon')
+        }
+    })
+    
 }
 function enableDocument() {
     const countSeats = document.getElementById('seat-number').innerText
