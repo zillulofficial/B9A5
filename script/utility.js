@@ -4,4 +4,5 @@ function addInnerText(id, value) {
 function setColorOfTheButton(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('bg-lime-400');
+    
 }

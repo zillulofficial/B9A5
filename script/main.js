@@ -1,12 +1,24 @@
 let AllBtn = document.getElementsByClassName('seat-Btn')
 let count = 0
+let btnCount= 0
 let getSeatCount = document.getElementById('seats').innerText
 let seatCount = parseInt(getSeatCount)
-
+let seatName = []
 for (const btn of AllBtn) {
     btn.addEventListener('click', function (e) {
         count += 1
+        btnCount += 1
         
+       
+        console.log(seatName)
+        if(seatName.includes(btn.innerText)){
+            alert("cant select one seat multiple times")
+            return
+        }
+        else{
+            seatName.push(btn.innerText)
+        }
+
         addInnerText('seat-number', count)
         if(count > 4){
             alert('Maximum Seat Booked')
