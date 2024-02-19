@@ -65,13 +65,26 @@ function applyBtn() {
     const getCoupon = document.getElementById('coupon-apply')
     const total = document.getElementById('total-price').innerText;
     const totalPrice = parseInt(total)
+    const discount= document.getElementById('discount-view')
 
     document.getElementById('apply-btn').addEventListener('click',function(){
         if (getCoupon.value === 'NEW15') {
             addInnerText('grand-total', totalPrice - (totalPrice * .15))
+            const p = document.createElement('p')
+            p.innerText= 'discount ='+ totalPrice * .15
+            discount.appendChild(p)
+
+            document.getElementById('coupon-apply').classList.add('hidden')
+            document.getElementById('apply-btn').classList.add('hidden')
         }
         else if (getCoupon.value === 'Couple 20') {
             addInnerText('grand-total', totalPrice - (totalPrice * .20))
+            const p = document.createElement('p')
+            p.innerText= 'discount ='+ totalPrice * .20
+            discount.appendChild(p)
+
+            document.getElementById('coupon-apply').classList.add('hidden')
+            document.getElementById('apply-btn').classList.add('hidden')
         }
         else {
             alert('You do not have an appropriate Coupon')
