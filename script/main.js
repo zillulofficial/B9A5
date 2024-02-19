@@ -6,7 +6,12 @@ let seatCount = parseInt(getSeatCount)
 for (const btn of AllBtn) {
     btn.addEventListener('click', function (e) {
         count += 1
+        if(count > 4){
+            alert('Maximum Seat Booked')
+            return
+        }
         addInnerText('seat-number', count)
+        
 
         enableDocument()
         seatCount = seatCount - 1
