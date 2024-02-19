@@ -72,7 +72,7 @@ function enableDocument() {
     const nextBtn = document.getElementById('nextBtn')
 
     number.addEventListener('input', function () {
-        if (countSeats === '4' && !isNaN(Number(number.value))) {
+        if (countSeats === '1' && !isNaN(Number(number.value))) {
             nextBtn.disabled = false
             nextBtn.addEventListener('click', function () {
                 document.getElementById('hidden-modal').classList.remove('hidden')
